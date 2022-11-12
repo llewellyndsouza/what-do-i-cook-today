@@ -3,6 +3,7 @@ import { createStyles, Header, Group, ActionIcon, Container, Burger } from "@man
 import { useDisclosure } from "@mantine/hooks";
 import { IconEggFried } from "@tabler/icons";
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from "@tabler/icons";
+import { ActionToggle } from "./ThemeToggle";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -106,6 +107,9 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
           </ActionIcon> */}
           <ActionIcon size="lg">
             <IconBrandInstagram size={18} stroke={1.5} />
+          </ActionIcon>
+          <ActionIcon size="lg">
+            <ActionToggle />
           </ActionIcon>
         </Group>
       </Container>
