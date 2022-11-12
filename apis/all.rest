@@ -1,0 +1,13 @@
+### Test connection
+GET http://localhost:3000 HTTP/1.1
+
+### Add a new ingredient
+POST http://localhost:3000/ingredient HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "test ingredient 3"
+}
+
+### Get all ingredients
+GET http://localhost:3000/ingredient HTTP/1.1

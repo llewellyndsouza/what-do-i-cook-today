@@ -16,6 +16,22 @@ app.get("/", (req, res) => {
   res.send("Hey");
 });
 
+app.post("/ingredient", async (req, res) => {
+  const ingredient = await prisma.ingredient.create({
+    data: {
+      name: req.body.name,
+    },
+  });
+
+  res.send(ingredient);
+});
+
+app.get("/ingredient", async (req, res, next) => {
+  const ingredients = await prisma.ingredient.findMany();
+
+  res.send(ingredients);
+});
+
 app.get("/feed", async (req, res) => {
   const { searchString, skip, take, orderBy } = req.query;
 
