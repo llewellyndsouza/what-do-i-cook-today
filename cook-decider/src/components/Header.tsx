@@ -108,9 +108,8 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
           <ActionIcon size="lg">
             <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg">
-            <ActionToggle />
-          </ActionIcon>
+
+          <ActionToggle />
         </Group>
       </Container>
     </Header>
