@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "ts-node index.ts",
-    "dev": "nodemon index.ts"
+    "dev": "nodemon index.ts --ignore 'cook-decider'"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/llewellyndsouza/what-do-i-cook-today#readme",
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
+    "@types/morgan": "^1.9.3",
     "@types/node": "^18.11.9",
     "nodemon": "^2.0.20",
     "prisma": "^4.6.1",
@@ -28,6 +30,9 @@
   },
   "dependencies": {
     "@prisma/client": "^4.6.1",
-    "express": "^4.18.2"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "morgan": "^1.10.0"
   }
 }
